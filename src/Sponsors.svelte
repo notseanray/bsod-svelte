@@ -7,8 +7,8 @@ import sponsor5 from "./assets/sponsors/5.jpg";
 import sponsor6 from "./assets/sponsors/6.jpg";
 </script>
 
-<div class="flex justify-center">
-	<div class="w-[45%]">
+<div class="flex flex-wrap justify-center">
+	<div class="w-[500px]">
 		<p class="text-[35px] mb-6 font-bold">
 			Sponsors
 		</p>
@@ -21,7 +21,6 @@ import sponsor6 from "./assets/sponsors/6.jpg";
 	If you are interested in sponsoring the growth of our team, please visit
 		</p>
 	</div>
-	<div class="w-[45%]">
 		<div class="flex flex-wrap">
 			<img class="rounded-md h-28 m-6" src={sponsor1} alt="" />
 			<img class="rounded-md h-28 m-6" src={sponsor2} alt="" />
@@ -34,5 +33,4 @@ import sponsor6 from "./assets/sponsors/6.jpg";
 			<img class="rounded-md h-36 m-6" src={sponsor6} alt="" />
 			<img class="rounded-md h-32 m-6" src={sponsor6} alt="" />
 		</div>
-	</div>
 </div>

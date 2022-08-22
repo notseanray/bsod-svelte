@@ -25,6 +25,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -64,7 +65,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: "#00a2ed";
   text-decoration: inherit;
 }
 
@@ -80,7 +81,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: "#00a2ed";
 }
 button:focus,
 button:focus-visible {

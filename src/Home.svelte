@@ -1,6 +1,6 @@
 
 <div class="flex justify-center">
-	<div class="float-left mr-96 mt-36">
+	<div class="float-left">
 		<img src={logo} width="170px" alt="" />
 		<p class="text-[30px] mb-2">
 			Black Screen of Death.
