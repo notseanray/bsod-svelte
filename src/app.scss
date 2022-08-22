@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+* {
+	font-family: 'Oxygen', sans-serif;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: "#00a2ed";
+}
+
+::selection {
+	color: "#00a2ed";
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-button:single-button {
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(82, 82, 90);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(23, 27, 29);
+}
+
+@keyframes fade {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+    overflow-y: hidden;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 11 {
+    header > :nth-child(#{$i}) {
+      animation-name: fade;
+      animation-duration: 550ms;
+    }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #242424;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
