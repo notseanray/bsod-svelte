@@ -17,7 +17,7 @@ import people from "./assets/people.jpg";
 			#19987
 		</p>
 		<p class="text-[17px] my-6 pt-6">
-		smarath is better than Leona, Kate, Sean, Ian, Tristin, Daniel Jack, Matthias, Amsha, Dev, Divyen
+			Leona, Kate, Sean, Ian, Tristin, Daniel Jack, Matthias, Amsha, Dev, Divyen
 		</p>
 	</div>
 </div>

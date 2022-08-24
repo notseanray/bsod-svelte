@@ -20,6 +20,8 @@ const debounce = (fn, interval) => {
 		}, interval);
 	};
 };
+
+let menuOpen = false;
 </script>
 
 <div class="overflow-x-hidden">
@@ -34,13 +36,14 @@ const debounce = (fn, interval) => {
 			<a class="p-2 hover:underline" href="/sponsors"> Sponsors</a>
 		</p>
 	{:else}
-		<p class="text-[40px] m-4 absolute ml-[60%]">
+		<p class="text-[40px] m-4 mr-5">
 			BS:(D
 		</p>
 		<div class="text-[16px] inline m-4 content-center">
 			<div class="navbar">
 				<div class="container nav-container mb-10">
 					<input
+						bind:checked={menuOpen}
 						class="checkbox"
 						type="checkbox"
 						name=""
@@ -52,13 +55,13 @@ const debounce = (fn, interval) => {
 						<span class="line line3" />
 					</div>
 					<div class="menu-items font-bold">
-						<a class="p-2 hover:underline" href="/"> Home</a>
+						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/"> Home</a>
 						<br />
-						<a class="p-2 hover:underline" href="/robot"> Robot</a>
+						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/robot"> Robot</a>
 						<br />
-						<a class="p-2 hover:underline" href="/about"> About us</a>
+						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/about"> About us</a>
 						<br />
-						<a class="p-2 hover:underline" href="/sponsors"> Sponsors</a>
+						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/sponsors"> Sponsors</a>
 					</div>
 				</div>
 			</div>
@@ -94,11 +97,11 @@ const debounce = (fn, interval) => {
 }
 .nav-container .checkbox {
     position: absolute;
+	right: 20px;
     display: block;
     height: 32px;
     width: 32px;
     top: 20px;
-    left: 20px;
     z-index: 500;
     opacity: 0;
     cursor: pointer;
@@ -109,7 +112,7 @@ const debounce = (fn, interval) => {
     width: 32px;
     position: absolute;
     top: 17px;
-    left: 20px;
+	right: 20px;
     z-index: 2;
     display: flex;
     flex-direction: column;
