@@ -1,72 +1,72 @@
 <script>
-  import { onMount, onDestroy } from "svelte";
+import { onMount, onDestroy } from "svelte";
 const MOBILE_WIDTH = 800;
 let mobile = innerWidth < MOBILE_WIDTH;
 onMount(() => {
-	window.addEventListener("resize", handleResize)
+    window.addEventListener("resize", handleResize)
 })
 onDestroy(() => {
-	window.removeEventListener("scroll", handleResize);
+    window.removeEventListener("scroll", handleResize);
 })
 const handleResize = (e) => {
-	mobile = innerWidth < MOBILE_WIDTH;
+    mobile = innerWidth < MOBILE_WIDTH;
 }
 const debounce = (fn, interval) => {
-	let timer;
-	return function debounced(...args) {
-		clearTimeout(timer);
-		timer = setTimeout(function call() {
-			fn(...args);
-		}, interval);
-	};
+    let timer;
+    return function debounced(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(function call() {
+            fn(...args);
+        }, interval);
+    };
 };
 
 let menuOpen = false;
 </script>
 
 <div class="overflow-x-hidden">
-	{#if !mobile}
-		<p class="text-[40px] m-4 absolute">
-			BS:(D
-		</p>
-		<p class="text-[16px] inline m-4 float-right">
-			<a class="p-2 hover:underline" href="/"> Home</a>
-			<a class="p-2 hover:underline" href="/robot"> Robot</a>
-			<a class="p-2 hover:underline" href="/about"> About us</a>
-			<a class="p-2 hover:underline" href="/sponsors"> Sponsors</a>
-		</p>
-	{:else}
-		<p class="text-[40px] m-4 mr-5">
-			BS:(D
-		</p>
-		<div class="text-[16px] inline m-4 content-center">
-			<div class="navbar">
-				<div class="container nav-container mb-10">
-					<input
-						bind:checked={menuOpen}
-						class="checkbox"
-						type="checkbox"
-						name=""
-						id=""
-					/>
-					<div class="hamburger-lines">
-						<span class="line line1" />
-						<span class="line line2" />
-						<span class="line line3" />
-					</div>
-					<div class="menu-items font-bold">
-						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/"> Home</a>
-						<br />
-						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/robot"> Robot</a>
-						<br />
-						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/about"> About us</a>
-						<br />
-						<a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/sponsors"> Sponsors</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	{/if}
+    {#if !mobile}
+        <p class="text-[40px] m-4 absolute">
+            BS:(D
+        </p>
+        <p class="text-[16px] inline m-4 float-right">
+            <a class="p-2 hover:underline" href="/"> Home</a>
+            <a class="p-2 hover:underline" href="/robot"> Robot</a>
+            <a class="p-2 hover:underline" href="/about"> About us</a>
+            <a class="p-2 hover:underline" href="/sponsors"> Sponsors</a>
+        </p>
+    {:else}
+        <p class="text-[40px] m-4 mr-5">
+            BS:(D
+        </p>
+        <div class="text-[16px] inline m-4 content-center">
+            <div class="navbar">
+                <div class="container nav-container mb-10">
+                    <input
+                        bind:checked={menuOpen}
+                        class="checkbox"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <div class="hamburger-lines">
+                        <span class="line line1" />
+                        <span class="line line2" />
+                        <span class="line line3" />
+                    </div>
+                    <div class="menu-items font-bold rounded-md">
+                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/"> Home</a>
+                        <br />
+                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/robot"> Robot</a>
+                        <br />
+                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/about"> About us</a>
+                        <br />
+                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/sponsors"> Sponsors</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/if}
 </div>
 
 <style>
@@ -97,7 +97,7 @@ let menuOpen = false;
 }
 .nav-container .checkbox {
     position: absolute;
-	right: 20px;
+    right: 20px;
     display: block;
     height: 32px;
     width: 32px;
@@ -112,7 +112,7 @@ let menuOpen = false;
     width: 32px;
     position: absolute;
     top: 17px;
-	right: 20px;
+    right: 20px;
     z-index: 2;
     display: flex;
     flex-direction: column;

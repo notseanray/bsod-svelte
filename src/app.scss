@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
 
 * {
-	font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
-::-moz-selection { /* Code for Firefox */
-	color: "#00a2ed";
+::-moz-selection {
+  /* Code for Firefox */
+  color: "#00a2ed";
 }
 
 ::selection {
-	color: "#00a2ed";
+  color: "#00a2ed";
 }
 
 :root {
@@ -57,10 +58,10 @@
 }
 
 @for $i from 1 through 11 {
-    header > :nth-child(#{$i}) {
-      animation-name: fade;
-      animation-duration: 550ms;
-    }
+  header > :nth-child(#{$i}) {
+    animation-name: fade;
+    animation-duration: 550ms;
+  }
 }
 
 a {
