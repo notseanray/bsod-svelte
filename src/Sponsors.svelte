@@ -22,15 +22,15 @@ import sponsor6 from "./assets/sponsors/6.jpg";
         </p>
     </div>
     <div class="flex flex-wrap">
-        <img class="rounded-md h-28 m-2" src={sponsor1} alt="" />
-        <img class="rounded-md h-28 m-2" src={sponsor2} alt="" />
-        <img class="rounded-md h-28 m-2" src={sponsor3} alt="" />
+        <img class="rounded-md h-28 m-2" src="https://bsod-robotics.vercel.app/sponsors/first.png" alt="" />
+        <img class="rounded-md h-28 m-2" src="https://bsod-robotics.vercel.app/sponsors/lockheed.png" alt="" />
+        <img class="rounded-md h-28 m-2" src="https://bsod-robotics.vercel.app/sponsors/nchs.png" alt="" />
     </div>
     <br />
     <div class="flex flex-wrap">
-        <img class="rounded-md h-36 m-2" src={sponsor4} alt="" />
-        <img class="rounded-md h-48 m-2" src={sponsor5} alt="" />
-        <img class="rounded-md h-36 m-2" src={sponsor6} alt="" />
-        <img class="rounded-md h-32 m-2" src={sponsor6} alt="" />
+        <img class="rounded-md h-36 m-2" src="https://bsod-robotics.vercel.app/sponsors/ULS.png" alt="" />
+        <img class="rounded-md h-48 m-2" src="https://bsod-robotics.vercel.app/sponsors/bofa.png" alt="" />
+        <!-- <img class="rounded-md h-36 m-2" src={sponsor6} alt="" /> -->
+        <!-- <img class="rounded-md h-32 m-2" src={sponsor6} alt="" /> -->
     </div>
 </div>
