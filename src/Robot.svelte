@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-wrap justify-center">
-    <div class="w-[500px]">
+    <div class="w-[800px]">
         <div class="p-6">
             <img class="rounded-lg" src="https://bsod-robotics.vercel.app/static/media/slide1.a8a1f8812b5320f85b18.png" alt="" />
         </div>
