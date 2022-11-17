@@ -51,7 +51,7 @@ const setmenu = (menu) => {
             <a class="p-2 hover:underline" href="/">Home</a>
             <a class="p-2 hover:underline" on:click={() => setmenu("robots")}>Robot</a>
             {#if submenu == "robots"}
-                <div class="absolute right-[170px] border p-2 m-1 bg-black">
+                <div class="absolute right-[170px] border p-2 m-1 bg-black m-2">
                     <a href="/robots/powerplay">Power Play</a>
                     <br />
                     <a href="/robots/freightfrenzy">Freight Frezy</a>
@@ -60,7 +60,7 @@ const setmenu = (menu) => {
             {/if}
             <a class="p-2 hover:underline" on:click={() => setmenu("about")}>About
             {#if submenu == "about"}
-                <div class="absolute right-[70px] border p-2 m-1 bg-black">
+                <div class="absolute right-[70px] border p-2 m-1 bg-black m-2">
                     <a href="/about/first">FIRST</a>
                     <br />
                     <a href="/about/team">Team</a>
@@ -70,7 +70,16 @@ const setmenu = (menu) => {
                 </div>
             {/if}
             </a>
-            <a class="p-2 hover:underline" href="/sponsors">Sponsors</a>
+            <a class="p-2 hover:underline" on:click={() => setmenu("sponsors")}>Sponsors
+            {#if submenu == "sponsors"}
+                <div class="absolute right-[10px] border p-2 m-1 bg-black m-2">
+                    <a href="/sponsors/donate">Donate</a>
+                    <br />
+                    <a href="/sponsors">Sponsors</a>
+                    <br />
+                </div>
+            {/if}
+            </a>
         </p>
     {:else}
         <p class="text-[40px] m-4 mr-5">

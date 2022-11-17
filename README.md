@@ -8,3 +8,7 @@ View it [here](https://bsod-svelte.vercel.app/)!
 FTC 19987
 
 Written in Svelte + Vite + Tailwindcss, very basic site
+
+#### potential changes
+* switch to svelte kit
+* 3d cad model view
