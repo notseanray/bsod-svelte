@@ -23,7 +23,7 @@ import sponsor7 from "../assets/sponsors/7.png";
         If you would like to become a sponsor, you can reach us <a class="text-[#00a2ed]" href="mailto:bsodrobotics@gmail.com">here</a>!
     </p>
 </div>
-<div class="flex flex-wrap justify-center">
+<div class="flex flex-wrap justify-center mx-[10%]">
     <div class="flex flex-wrap justify-center">
         <div class="grid grid-cols-2 grid-flow-row gap-4">
             <img class="rounded-md max-h-48 m-2" src={sponsor1} alt="" />

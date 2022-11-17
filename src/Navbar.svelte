@@ -103,20 +103,46 @@ const setmenu = (menu) => {
                     <div class="menu-items font-bold rounded-md">
                         <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/">Home</a>
                         <br />
-                        <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/robot">Robot
-                        {#if submenu == ""}
+                        <a class="p-2" on:click={() => menuOpen = false}>
+                            <div class="underline">
+                                Robot
+                            </div>
                             <div>
                                 <br />
                                 <a href="/robots/powerplay">Power Play</a>
                                 <br />
                                 <a href="/robots/freightfrenzy">Freight Frezy</a>
+                                <br />
                             </div>
-                        {/if}
                         </a>
                         <br />
-                        <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/about">About</a>
+                        <a class="p-2" on:click={() => menuOpen = false}>
+                            <div class="underline">
+                                About
+                            </div>
+                            <div>
+                                <br />
+                                <a href="/about/first">FIRST</a>
+                                <br />
+                                <a href="/about/team">Team</a>
+                                <br />
+                                <a href="/about/achievements">Achievements</a>
+                                <br />
+                            </div>
+                        </a>
                         <br />
-                        <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/sponsors">Sponsors</a>
+                        <a class="p-2" on:click={() => menuOpen = false}>
+                            <div class="underline">
+                                Sponsors
+                            </div>
+                            <div>
+                                <br />
+                                <a href="/sponsors/donate">Donate</a>
+                                <br />
+                                <a href="/sponsors">Sponsors</a>
+                                <br />
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
