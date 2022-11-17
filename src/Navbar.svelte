@@ -22,6 +22,24 @@ const debounce = (fn, interval) => {
 };
 
 let menuOpen = false;
+let submenu = "";
+let current = "";
+
+window.addEventListener("click", function() {
+    current = submenu;
+    submenu = "";
+});
+
+const setmenu = (menu) => {
+    const timeout = setTimeout(() => {
+        if (submenu == menu || current == menu) {
+            submenu = "";
+        } else {
+            current = menu;
+            submenu = menu;
+        }
+    }, 10);
+};
 </script>
 
 <div class="overflow-x-hidden">
@@ -30,10 +48,29 @@ let menuOpen = false;
             BS:(D
         </p>
         <p class="text-[24px] inline m-4 float-right">
-            <a class="p-2 hover:underline" href="/"> Home</a>
-            <a class="p-2 hover:underline" href="/robot"> Robot</a>
-            <a class="p-2 hover:underline" href="/about"> About Us</a>
-            <a class="p-2 hover:underline" href="/sponsors"> Sponsors</a>
+            <a class="p-2 hover:underline" href="/">Home</a>
+            <a class="p-2 hover:underline" on:click={() => setmenu("robots")}>Robot</a>
+            {#if submenu == "robots"}
+                <div class="absolute right-[170px] border p-2 m-1 bg-black">
+                    <a href="/robots/powerplay">Power Play</a>
+                    <br />
+                    <a href="/robots/freightfrenzy">Freight Frezy</a>
+                    <br />
+                </div>
+            {/if}
+            <a class="p-2 hover:underline" on:click={() => setmenu("about")}>About
+            {#if submenu == "about"}
+                <div class="absolute right-[70px] border p-2 m-1 bg-black">
+                    <a href="/about/first">FIRST</a>
+                    <br />
+                    <a href="/about/team">Team</a>
+                    <br />
+                    <a href="/about/achievements">Achievements</a>
+                    <br />
+                </div>
+            {/if}
+            </a>
+            <a class="p-2 hover:underline" href="/sponsors">Sponsors</a>
         </p>
     {:else}
         <p class="text-[40px] m-4 mr-5">
@@ -55,13 +92,22 @@ let menuOpen = false;
                         <span class="line line3" />
                     </div>
                     <div class="menu-items font-bold rounded-md">
-                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/"> Home</a>
+                        <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/">Home</a>
                         <br />
-                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/robot"> Robot</a>
+                        <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/robot">Robot
+                        {#if submenu == ""}
+                            <div>
+                                <br />
+                                <a href="/robots/powerplay">Power Play</a>
+                                <br />
+                                <a href="/robots/freightfrenzy">Freight Frezy</a>
+                            </div>
+                        {/if}
+                        </a>
                         <br />
-                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/about"> About us</a>
+                        <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/about">About</a>
                         <br />
-                        <a class="p-2 hover:underline" on:click="{() => menuOpen = false}" href="/sponsors"> Sponsors</a>
+                        <a class="p-2 hover:underline" on:click={() => menuOpen = false} href="/sponsors">Sponsors</a>
                     </div>
                 </div>
             </div>
